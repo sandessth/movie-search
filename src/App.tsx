@@ -1,7 +1,12 @@
-import SearchBar from "./components/search/searchBar";
+import HomePage from "./Pages/home-page";
+import { DataContextProvider } from "./context/DataContext";
 
 function App() {
-  return <SearchBar />;
+  return (
+    <DataContextProvider>
+      <HomePage />
+    </DataContextProvider>
+  );
 }
 
 export default App;
