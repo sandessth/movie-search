@@ -6,23 +6,12 @@ import WhatshotIcon from "@mui/icons-material/Whatshot";
 import MovieIcon from "@mui/icons-material/Movie";
 import TvIcon from "@mui/icons-material/Tv";
 import SearchIcon from "@mui/icons-material/Search";
-import { makeStyles } from "@mui/material";
-
-// const useStyles = makeStyles({
-//   root: {
-//     width: 500,
-//     position: "fixed",
-//     bottom: 0,
-//     backgroundColor: "#2d313a",
-//     zIndex: 100,
-//   },
-// });
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{ width: 500 }}>
+    <Box xl={{ width: 500 }}>
       <BottomNavigation
         showLabels
         value={value}

@@ -1,11 +1,11 @@
-import SearchBar from "./components/search/searchBar";
-import Header from "./components/Header/header.jsx";
+import HomePage from "./Pages/home-page";
 
 function App() {
-  return;
-
-  <Header> <SearchBar /> <Header/>
-   
-
+  return (
+    <>
+      <HomePage />
+    </>
+  );
+}
 
 export default App;
