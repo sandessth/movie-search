@@ -1,7 +1,6 @@
 import TopNav from "../components/Header/header";
 import SearchBar from "../components/search/searchBar";
 import SimpleBottomNavigation from "../components/Footer/footer";
-import MovieCard from "../components/MovieCard/MovieCard";
 import "../App.css";
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
@@ -13,11 +12,13 @@ function HomePage() {
   return (
     <>
       <TopNav />
-      <SearchBar />
-      <div className="flex flex row gap-5 m-20 mb-50">
-        <MovieCard /> <MovieCard /> <MovieCard /> <MovieCard />
-      </div>
       <SimpleBottomNavigation />
+      {data.map((movies, index) => (
+        <div className="bg-slate-300 flex justify-center" key={index}>
+          {movies.title}({movies.year})
+        </div>
+      ))}
+      <SearchBar />
     </>
   );
 }

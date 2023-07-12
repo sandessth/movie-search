@@ -12,7 +12,7 @@ function MovieCard() {
       </div>
       <div className="card-details">
         <div>
-          <span className="title"> Guardians of the Galaxy Vol. 2 </span>
+          {<span className="title"> Guardians of the Galaxy Vol. 2 </span>}
         </div>
 
         <div>

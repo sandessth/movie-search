@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
 import { rapidAPIGetTrendingMovies } from "../axiosbase";
 
-const initialData = { name: "Hello" };
+const initialData = [];
 
 export const DataContext = createContext(initialData);
 
@@ -14,7 +14,7 @@ export const DataContextProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const response = await rapidAPIGetTrendingMovies();
+      const response: unknown[] = await rapidAPIGetTrendingMovies();
       setData(response.data.movie_results);
     } catch (error) {
       console.log(error);

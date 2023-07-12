@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   cursor: pointer;
-  position: fixed;
+  /* position: fixed; */
   justify-content: center;
   text-transform: uppercase;
   background-color: #39445a;
@@ -12,5 +12,5 @@
   color: white;
   z-index: 100;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
 }
