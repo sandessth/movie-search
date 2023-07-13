@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { rapidAPIGetTrendingMovies } from "../axiosbase";
+import { rapidAPIGetMovieByGenre } from "../axiosbase";
 
 const initialData = [];
 
@@ -14,8 +14,8 @@ export const DataContextProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const response: unknown[] = await rapidAPIGetTrendingMovies();
-      setData(response.data.movie_results);
+      const response: unknown[] = await rapidAPIGetMovieByGenre();
+      setData(response.data.results);
     } catch (error) {
       console.log(error);
     }
