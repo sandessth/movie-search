@@ -4,10 +4,12 @@ export const rapidAPIGetTrendingMovies = async () => {
   try {
     const baseAxios = axios.create({
       baseURL: "https://movies-tv-shows-database.p.rapidapi.com/",
-      params: { page: "1" },
+      params: {
+        title: "Harry Potter",
+      },
       headers: {
-        Type: "get-trending-movies",
-        "X-RapidAPI-Key": "cc17bd27bemsh58b41ef101ada87p1a0524jsn16ea5cc06edf",
+        Type: "get-movies-by-title",
+        "X-RapidAPI-Key": "29d8c874f7msh0ec5096fccc3b3fp16143bjsnfca6b1560938",
         "X-RapidAPI-Host": "movies-tv-shows-database.p.rapidapi.com",
       },
     });

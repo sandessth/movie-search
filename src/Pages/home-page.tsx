@@ -12,13 +12,13 @@ function HomePage() {
   return (
     <>
       <TopNav />
+      <SearchBar />
       <SimpleBottomNavigation />
       {data.map((movies, index) => (
         <div className="bg-slate-300 flex justify-center" key={index}>
           {movies.title}({movies.year})
         </div>
       ))}
-      <SearchBar />
     </>
   );
 }
