@@ -6,6 +6,7 @@ import WhatshotIcon from "@mui/icons-material/Whatshot";
 import MovieIcon from "@mui/icons-material/Movie";
 import TvIcon from "@mui/icons-material/Tv";
 import SearchIcon from "@mui/icons-material/Search";
+import SearchBar from "../search/searchBar";
 
 export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
@@ -37,11 +38,7 @@ export default function SimpleBottomNavigation() {
           icon={<TvIcon />}
         />
 
-        <BottomNavigationAction
-          styles={{ color: "white" }}
-          label="Search"
-          icon={<SearchIcon />}
-        />
+        <SearchBar />
       </BottomNavigation>
     </Box>
   );
