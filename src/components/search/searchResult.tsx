@@ -1,8 +1,18 @@
-function SearchResult() {
-  return <div>SearchResult</div>;
+// import { useContext } from "react";
+// import { DataContext } from "../../context/DataContext";
 
-  // <input type="text" />
-  // <button className="flex justify-content: center">Submit</button>
-}
+// function SearchResult() {
+//   const data = useContext(DataContext);
+//   console.log(data);
+//   return (
+//     <>
+//       {data.map((movies, index) => (
+//         <div className="bg-slate-300 flex justify-center" key={index}>
+//           {movies.title}({movies.year})
+//         </div>
+//       ))}
+//     </>
+//   );
+// }
 
-export default SearchResult;
+// export default SearchResult;

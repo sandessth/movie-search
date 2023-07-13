@@ -1,11 +1,14 @@
 import HomePage from "./Pages/home-page";
 import { DataContextProvider } from "./context/DataContext";
+import SearchProvider from "./context/SearchContext";
 
 function App() {
   return (
-    <DataContextProvider>
-      <HomePage />
-    </DataContextProvider>
+    <SearchProvider>
+      <DataContextProvider>
+        <HomePage />
+      </DataContextProvider>
+    </SearchProvider>
   );
 }
 
