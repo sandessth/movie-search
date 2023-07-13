@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { rapidAPIGetTrendingMovies } from "../axiosbase";
+import { rapidAPIGetTrendingMovies, rapidAPISearchMovies } from "../axiosbase";
 
 const initialData = [];
 
@@ -12,6 +12,15 @@ export const DataContextProvider = ({ children }) => {
     void fetchData();
   }, []);
 
+  const fetchSearch = async (searchParam: string) => {
+    try {
+      const response: unknown[] = await rapidAPISearchMovies(searchParam);
+      setData(response.data.movie_results);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const fetchData = async () => {
     try {
       const response: unknown[] = await rapidAPIGetTrendingMovies();
@@ -21,7 +30,7 @@ export const DataContextProvider = ({ children }) => {
     }
   };
   return (
-    <DataContext.Provider value={data || initialData}>
+    <DataContext.Provider value={{ data: data || initialData, fetchSearch }}>
       {children}
     </DataContext.Provider>
   );

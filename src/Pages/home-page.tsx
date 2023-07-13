@@ -6,19 +6,24 @@ import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 
 function HomePage() {
-  const data = useContext(DataContext);
+  const { data } = useContext(DataContext);
   console.log(data);
 
   return (
     <>
       <TopNav />
       <SearchBar />
-      <SimpleBottomNavigation />
+
       {data.map((movies, index) => (
-        <div className="bg-slate-300 flex justify-center" key={index}>
-          {movies.title}({movies.year})
+        <div
+          className="bg-slate-300 flex p-2 gap-1 justify-center items-center"
+          key={index}
+        >
+          <button>{movies.title}</button>
+          <div className="text-slate-700">{movies.year}</div>
         </div>
       ))}
+      <SimpleBottomNavigation />
     </>
   );
 }
