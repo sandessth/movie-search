@@ -33,7 +33,10 @@ function HomePage() {
           <div className="col-span-3 flex justify-center">{movies.title}</div>
           <div className="col-span-1 flex justify-center">{movies.year}</div>
           <button className="col-span-1 w-1/2 bg-blue-200 hover:bg-slate-300 text-slate-900 drop-shadow-md hover:drop-shadow-lg rounded-md my-1 mx-1 px-2 py-1">
-            View Images
+            <img
+              className="col-span-3 flex justify-center h-20 w-40"
+              src="https://picsum.photos/200/300"
+            />
           </button>
         </div>
       ))}
