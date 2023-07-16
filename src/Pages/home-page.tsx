@@ -13,6 +13,7 @@ function HomePage() {
     <>
       <TopNav />
       <SimpleBottomNavigation />
+      <SearchBar />
       {data.map((movies, index) => (
         <div className="bg-slate-300 p-5 m-2 gap-1" key={index}>
           <h1 className="text underline font-bold">{movies.title}</h1>
@@ -27,7 +28,6 @@ function HomePage() {
           </div>
         </div>
       ))}
-      <SearchBar />
     </>
   );
 }
